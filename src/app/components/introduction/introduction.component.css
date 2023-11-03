@@ -1,0 +1,42 @@
+.introduction-main{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    /* padding: 200px 0; */
+    background-image: url(../../../assets/images/barnimagesSky.jpg);
+    background-repeat: no-repeat;
+    background-position:center right;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+}
+.presentation{
+    text-align: center;
+}
+.presentation h3{
+    color: rgb(26, 56, 59);
+}
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.link-icon{
+    fill: rgb(79, 90, 104)
+}
+.portrait-container{
+    text-align: center;
+}
+.portrait-container img{
+    border-radius: 100%;
+    object-fit: contain;
+    max-width: 300px;
+    min-width: 200px;
+    width: 40%;
+}
+
