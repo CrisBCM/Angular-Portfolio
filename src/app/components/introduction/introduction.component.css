@@ -8,35 +8,87 @@
     gap: 20px;
     width: 100%;
     height: 100vh;
-    /* padding: 200px 0; */
-    background-image: url(../../../assets/images/barnimagesSky.jpg);
+    background-image: linear-gradient(rgba(5, 7, 12, 0.603), rgba(5, 7, 12, 0.568)), url(../../../assets/images/introduction-bg.jpg);
     background-repeat: no-repeat;
     background-position:center right;
     background-size: cover;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+.presentation-carousel{
+    /* background-color: rgba(44, 49, 88, 0.336); */
+    width: 90vw;
+    padding: 2px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.slider{
+    display: flex;
+    flex-flow: row nowrap;
+    /* height: 90%; */
+    width: 300%;
+    /* margin-top: 8px; */
+    justify-content: space-between;
+    padding: 5px;
+    /* background-color: #e2e2e2; */
+    transform: translateX(-66.6%);
+}
+.spots-carousel{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+}
+.spot{
+    height: 15px;
+    width: 15px;
+    background-color: rgba(255, 255, 255, 0.76);
+    border-radius: 10px;
 }
 .presentation{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
 }
-.presentation h3{
-    color: rgb(26, 56, 59);
+.card-style{
+    width: calc(100% / 3 - .5em);
+    /* background-color: rgb(155, 116, 116); */
+
+}
+.presentation h1{
+    color: #3C6E71;
+    font-weight: bold;
+    margin: 0;
+}
+.presentation span{
+    color: #AFB3B7;
 }
 .links{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
+    justify-content: center;
 }
 .link-icon{
-    fill: rgb(79, 90, 104)
+    fill: #3D5A6C;
 }
 .portrait-container{
     text-align: center;
 }
 .portrait-container img{
-    border-radius: 100%;
+    background-color: rgba(128, 128, 128, 0.664);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.623);
     object-fit: contain;
-    max-width: 300px;
+    max-width: 350px;
     min-width: 200px;
-    width: 40%;
+    width: 45%;
+    filter: grayscale(80%);
 }
 
