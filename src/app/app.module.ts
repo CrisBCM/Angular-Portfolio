@@ -9,6 +9,7 @@ import { faFile } from '@fortawesome/free-regular-svg-icons';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { PortfolioMainComponent } from './components/portfolio-main/portfolio-main.component';
 import { CommonModule } from '@angular/common';
+import { faUser, faHeart} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -31,6 +32,6 @@ import { CommonModule } from '@angular/common';
 })
 export class AppModule { 
   constructor(library: FaIconLibrary){
-    library.addIcons(faFile, );
+    library.addIcons(faFile, faUser, faHeart);
   }
 }

@@ -24,8 +24,12 @@
             </div>
         </div>
         <ul class="spots-carousel">
-            <li  [ngClass]="{'active-spot': view == 1}" (click)="view = 1" class="spot"></li>
-            <li [ngClass]="{'active-spot': view == 2}" (click)="view = 2" class="spot"></li>
+            <li (click)="view = 1" class="spot" [ngClass]="{'active-spot': view == 1}">
+                <fa-icon [icon]="'user'"></fa-icon>
+            </li>
+            <li (click)="view = 2" class="spot" [ngClass]="{'active-spot': view == 2}">
+                <fa-icon [icon]="'heart'"></fa-icon>
+            </li>
             <li [ngClass]="{'active-spot': view == 3}" (click)="view = 3" class="spot"></li>
         </ul>
     </div>

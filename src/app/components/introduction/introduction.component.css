@@ -25,7 +25,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 }
 .slider{
     display: flex;
@@ -48,7 +48,7 @@
     transform: translateX(-66.6%);
 }
 .spots-carousel{
-    background-color:rgba(75, 117, 84, 0.418);
+    /* background-color:#ecd5cd; */
     align-self: center;
     width: min-content;
     padding: .7em;
@@ -61,12 +61,14 @@
     border-radius: 18px;
 }
 .spot{
-    padding: 7px;
-    background-color: rgba(255, 255, 255, 0.514);
-    border-radius: 10px;
+    color: #85908c;
+    cursor: pointer;
+    font-size: 24px;
+    filter: drop-shadow(1px 1px 2px rgba(31, 30, 30, 0.507));
 }
-.active-spot{
-    background-color: rgba(255, 255, 255, 0.678);
+
+.active-spot, .spot fa-icon:hover{
+    color: #191c49;
 }
 .presentation{
     text-align: center;
@@ -95,7 +97,7 @@
     justify-content: center;
 }
 .link-icon{
-    fill: #3D5A6C;
+    fill: #69867d;
 }
 .portrait-container{
     text-align: center;
