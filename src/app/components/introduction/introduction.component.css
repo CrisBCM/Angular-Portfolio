@@ -8,10 +8,14 @@
     gap: 20px;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(5, 7, 12, 0.603), rgba(5, 7, 12, 0.568)), url(../../../assets/images/introduction-bg.jpg);
+    /* background-image: linear-gradient(rgba(5, 7, 12, 0.623), rgba(5, 7, 12, 0.568)), url(../../../assets/images/dandelion.jpg);
     background-repeat: no-repeat;
     background-position:center right;
-    background-size: cover;
+    background-size: cover; */
+    background: #536976;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #292E49, #536976);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #292E49, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     font-family: 'Raleway', sans-serif;
 }
 .presentation-carousel{
@@ -32,38 +36,52 @@
     justify-content: space-between;
     padding: 5px;
     /* background-color: #e2e2e2; */
+    transition: all 2s;
+}
+.view1{
+    transform: none;
+}
+.view2{
+    transform: translateX(-33.3%);
+}
+.view3{
     transform: translateX(-66.6%);
 }
 .spots-carousel{
-    width: 100%;
-    padding: 1em;
+    background-color:rgba(75, 117, 84, 0.418);
+    align-self: center;
+    width: min-content;
+    padding: .7em;
     display: flex;
     flex-direction: row;
     list-style-type: none;
     justify-content: center;
     gap: 15px;
     margin: 0;
+    border-radius: 18px;
 }
 .spot{
-    height: 15px;
-    width: 15px;
-    background-color: rgba(255, 255, 255, 0.76);
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.514);
     border-radius: 10px;
+}
+.active-spot{
+    background-color: rgba(255, 255, 255, 0.678);
 }
 .presentation{
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
 }
+
 .card-style{
     width: calc(100% / 3 - .5em);
     /* background-color: rgb(155, 116, 116); */
 
 }
 .presentation h1{
-    color: #3C6E71;
+    color: #dad7cd;
     font-weight: bold;
     margin: 0;
 }

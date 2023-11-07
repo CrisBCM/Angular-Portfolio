@@ -3,9 +3,9 @@
         <img src="../../../assets/images/portrait.png" alt="my portrait">
     </div>
     <div class="presentation-carousel">
-        <div class="slider">
+        <div class="slider" [ngClass]="{'view1': view == 1, 'view2': view == 2, 'view3': view == 3}">
             <div class="presentation card-style">
-                <h1>Cristian Cruz Martinez</h1>
+                <h1>Cristian Cruz</h1>
                 <span>Desarrollador Frontend Angular</span>
                 <div class="links">
                     <a href="https://www.linkedin.com/in/crisbcm/">
@@ -24,9 +24,9 @@
             </div>
         </div>
         <ul class="spots-carousel">
-            <li class="spot"></li>
-            <li class="spot"></li>
-            <li class="spot"></li>
+            <li  [ngClass]="{'active-spot': view == 1}" (click)="view = 1" class="spot"></li>
+            <li [ngClass]="{'active-spot': view == 2}" (click)="view = 2" class="spot"></li>
+            <li [ngClass]="{'active-spot': view == 3}" (click)="view = 3" class="spot"></li>
         </ul>
     </div>
 </main>

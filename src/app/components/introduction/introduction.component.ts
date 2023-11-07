@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./introduction.component.css']
 })
 export class IntroductionComponent {
-
+  view:number = 1;
 }

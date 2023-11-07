@@ -8,6 +8,7 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faFile } from '@fortawesome/free-regular-svg-icons';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { PortfolioMainComponent } from './components/portfolio-main/portfolio-main.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -22,7 +23,8 @@ import { PortfolioMainComponent } from './components/portfolio-main/portfolio-ma
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
