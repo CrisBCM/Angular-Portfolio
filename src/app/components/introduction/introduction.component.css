@@ -18,7 +18,7 @@
 }
 .presentation-carousel{
     /* background-color: rgba(44, 49, 88, 0.336); */
-    width: 90vw;
+    width: 100vw;
     padding: 2px;
     overflow: hidden;
     display: flex;
@@ -34,7 +34,7 @@
     justify-content: space-between;
     padding: 5px;
     /* background-color: #e2e2e2; */
-    transition: all 2s;
+    transition: all 1s;
 }
 .view1{
     transform: none;
@@ -60,16 +60,16 @@
 }
 
 .spot{
-    color: #85908c;
+    color: #a79e9c89;
     cursor: pointer;
     font-size: 24px;
     filter: drop-shadow(1px 1px 2px rgba(31, 30, 30, 0.507));
 }
-.spot-user:hover, .active-spot-user{
+/* .spot-user:hover, .active-spot-user{
     color: #e2b683;
-}
+} */
 .spot-heart:hover, .active-spot-heart{
-    color: rgb(220, 150, 209);
+    color: rgb(221, 87, 203);
 }
 
 .presentation{
@@ -84,13 +84,41 @@
     /* background-color: rgb(155, 116, 116); */
 
 }
+.about-me h3{
+    color:#B58863;
+}
+.spot-user:hover, .active-spot-user{
+    color: #6330c2;
+}
+.about-me-container{
+    padding-left: 20px;
+}
+.about-me p{
+    font-weight: 500;
+    color:#DEDCDC ;
+}
 .presentation h1{
-    color: #e2b683;
+    color: #6330c2b0;
     font-weight: bold;
-    margin: 0;
+    margin-bottom:0;
 }
 .presentation span{
     color: #DEDCDC;
+}
+.presentation .highlight{
+    display: block;
+    color: #86A8CF;
+}
+.angular-style{
+    background: #C9080D;
+    background: linear-gradient(to right, #C9080D 0%, #7802fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.highlight{
+    color: #86A8CF;
 }
 .links{
     display: flex;
@@ -99,21 +127,25 @@
     justify-content: center;
 }
 .link-icon{
-    fill: #c5bac4d6;
+    height: 2em;
+    fill: #a79e9c59;
 }
-.link-icon:hover{ 
-    fill: #DEDCDC;
+.links a:first-child .link-icon:hover{ 
+    fill: #42598b;
+}
+.links a:nth-child(2) .link-icon:hover{
+    fill: #babec5;
 }
 .portrait-container{
     text-align: center;
 }
 .portrait-container img{
-    background-color: rgba(128, 128, 128, 0.664);
+    /* background-color: rgba(128, 128, 128, 0.664); */
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.623);
     object-fit: contain;
     max-width: 350px;
     min-width: 200px;
     width: 45%;
-    filter: grayscale(80%);
+    filter: grayscale(60%);
 }
 
