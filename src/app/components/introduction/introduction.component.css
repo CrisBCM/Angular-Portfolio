@@ -3,6 +3,9 @@
     position: absolute;
     background-color: #191D23;
     font-family: 'Raleway', sans-serif;
+    /* Best gradient */
+
+    background: linear-gradient(#0f0c29,#302b63,#24243e);
 }
 .introduction-container{
     display: flex;
@@ -62,7 +65,7 @@
 }
 
 .presentation{
-    text-align: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -89,9 +92,39 @@
     color:#DEDCDC ;
 }
 .presentation h1{
+    width: max-content;
     color: #6330c2b0;
     font-weight: bold;
     margin-bottom:0;
+    position: relative;
+    animation: changeColorWord 2s ease-in-out forwards;
+}
+@keyframes textSelection {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes changeColorWord {
+    0%{
+        color: #6330c2b0;;
+    }
+    100%{
+       color: #ffffff;
+    }
+}
+.presentation h1::after{
+    content: " ";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    background-color: #083aae3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: textSelection 2s ease forwards;
 }
 .presentation h1 span{
     display: block;
@@ -155,6 +188,9 @@
         flex-direction: column;
         width: 100%;
         gap: 15px;
+    }
+    .presentation{
+        align-items: flex-start;
     }
     .presentation-carousel{
         width: 53%;
