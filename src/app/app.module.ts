@@ -10,6 +10,7 @@ import { IntroductionComponent } from './components/introduction/introduction.co
 import { PortfolioMainComponent } from './components/portfolio-main/portfolio-main.component';
 import { CommonModule } from '@angular/common';
 import { faUser, faHeart} from '@fortawesome/free-solid-svg-icons';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 
 
@@ -19,7 +20,8 @@ import { faUser, faHeart} from '@fortawesome/free-solid-svg-icons';
     AppComponent,
     MenuNavbarComponent,
     IntroductionComponent,
-    PortfolioMainComponent
+    PortfolioMainComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,7 @@
 .introduction-main{
     width: 100%;
-    position: absolute;
     background-color: #191D23;
     font-family: 'Raleway', sans-serif;
-    /* Best gradient */
-
     background: linear-gradient(#0f0c29,#302b63,#24243e);
 }
 .introduction-container{
