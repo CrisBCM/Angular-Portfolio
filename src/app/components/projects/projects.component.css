@@ -26,6 +26,7 @@
 }
 .project:hover .project-description{
     opacity: 1;
+    top: 0;
 }
 .project img{
     max-width: 100%;
@@ -40,6 +41,8 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    top: -99%;
     text-align: center;
     opacity: 0;
+    transition: all 1s;
 }
