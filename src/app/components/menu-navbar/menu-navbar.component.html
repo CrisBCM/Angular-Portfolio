@@ -6,11 +6,10 @@
     </div>
     <div class="nav-menu-container">
         <nav class="nav-menu">
-            <a class="a-active" href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Works</a>
-            <a href="#">Process</a>
-            <a href="#">Contact</a>
+            <a class="a-active" (click)="emitScroll.emit('introduction')">Introduction</a>
+            <a (click)="emitScroll.emit('projects')">Projects</a>
+            <a >Process</a>
+            <a >Contact</a>
         </nav>
     </div>
     <div class="resume-container">
