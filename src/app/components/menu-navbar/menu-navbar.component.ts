@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu-navbar',
@@ -7,6 +7,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class MenuNavbarComponent {
   @Output() emitScroll = new EventEmitter <string>;
-
+  @Input() actualPage:string = "";
   
 }

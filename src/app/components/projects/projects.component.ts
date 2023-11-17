@@ -7,6 +7,7 @@ import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@
 })
 export class ProjectsComponent implements AfterViewInit{
   @ViewChild('projects') projectsContainer!:ElementRef;
+  @ViewChild('projectsMain') projectsMain!:ElementRef;
   rect:any;
   isVisible:boolean = false;
   
@@ -16,6 +17,7 @@ export class ProjectsComponent implements AfterViewInit{
   @HostListener('window:scroll', [])
   onScroll(){
     this.rect = this.projectsContainer.nativeElement.getBoundingClientRect();
+    console.log(this.rect, "window.innerHeight: " + window.innerHeight);
     this.isVisible = this.rect.top < window.innerHeight && this.rect.bottom >= 0;
   }
 }

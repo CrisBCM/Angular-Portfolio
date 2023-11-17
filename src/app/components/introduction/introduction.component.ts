@@ -7,4 +7,5 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class IntroductionComponent {
   view:number = 1;
+  @ViewChild('mainElement') mainElement!:ElementRef;
 }

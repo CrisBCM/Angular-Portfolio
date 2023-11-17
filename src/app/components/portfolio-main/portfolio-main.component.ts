@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { IntroductionComponent } from '../introduction/introduction.component';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { IntroductionComponent } from '../introduction/introduction.component';
+import { ProjectsComponent } from '../projects/projects.component';
 
 @Component({
   selector: 'app-portfolio-main',
@@ -8,15 +9,39 @@ import { ViewportScroller } from '@angular/common';
   styleUrls: ['./portfolio-main.component.css']
 })
 export class PortfolioMainComponent{
+  viewportInSection:string = "introduction";
+  @ViewChild('introduction') introductionComp!:IntroductionComponent;
+  @ViewChild('projects') projectsComp!:ProjectsComponent;
+  introductionRec:any;
+  projectsRec:any;
 
-  constructor(private viewportScroller: ViewportScroller){}
+  constructor(private viewportScroller: ViewportScroller){
+    this.scrollToIntroduction();
+  }
 
+  @HostListener('window:scroll', [])
+  onScroll(){
+    this.introductionRec = this.introductionComp.mainElement.nativeElement.getBoundingClientRect();
+    this.projectsRec = this.projectsComp.projectsMain.nativeElement.getBoundingClientRect();
+
+    if(this.introductionRec.top <= 0) this.viewportInSection = "introduction";
+    if(this.projectsRec.top <= 0) this.viewportInSection = "projects";
+  }
+
+  scrollToIntroduction(){
+    this.viewportScroller.scrollToAnchor('introduction');
+    this.viewportInSection = 'introduction';
+  }
+  scrollToProjects(){
+    this.viewportScroller.scrollToAnchor('projects');
+    this.viewportInSection = 'projects';
+  }
 
   scrollTo(componentName:string){
 
     const components:{[key:string]: ()=> void} = {
-      'introduction': () => {this.viewportScroller.scrollToAnchor('introduction')},
-      'projects': () => {this.viewportScroller.scrollToAnchor('projects')}
+      'introduction': () => {this.scrollToIntroduction()},
+      'projects': () => {this.scrollToProjects()}
     }
 
     components[componentName]();
