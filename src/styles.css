@@ -6,5 +6,6 @@ html{
     box-sizing: border-box;
 }
 body{
+    background:linear-gradient(#000000,#434343);
     margin: 0;
 }
