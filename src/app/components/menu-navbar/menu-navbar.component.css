@@ -31,7 +31,7 @@
     gap: 2px;
     border-radius: 18px;
     max-width: 650px;
-    background-color:rgba(41, 41, 41, .7);
+    background-color:#22333bc0;
     bottom: 20px;
     left: 15px;
     right: 15px;
@@ -42,7 +42,7 @@
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: white;
+    color: #DEDCDC;
     text-decoration: none;
     padding: 9px 10px;
     border-radius: 14px;
@@ -50,22 +50,19 @@
     transition: background-color 0.2s ease, padding .5s;
 }
 .nav-menu a:hover{
-    background-color: #4B4B4B;
+    background-color: #1e252981;
 }
 .a-active{
-    background-color: #4B4B4B;
+    background-color: #1e252960;
 }
 .fa-file{
     color: rgb(198, 198, 202);
     margin-right: 5px;
 }
-.resume-container{
+.resume{
     display: none;
 }
-.resume-container a{
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-}
+
 
 /* Responsive Movil L */
 @media (min-width: 576px) {
@@ -112,18 +109,9 @@
     .nav-menu a{
         padding: 14px 40px;
     }
-    .resume-container{
+    .resume{
         display: flex;
         justify-content: flex-end;
         width: 20%;
-    }
-    .resume-container a{
-        width: 170px;
-        padding: 16px 0;
-        background-color: rgba(0, 0, 0, 0.589);
-        text-align: center;
-        border-radius: 14px;
-        color: white;
-        text-decoration: none;
     }
 }

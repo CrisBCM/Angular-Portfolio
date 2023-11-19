@@ -1,0 +1,21 @@
+.resume-container a{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+.resume-container a{
+    display: block;
+    padding: 16px 16px;
+    background-color: #22333bbb;
+    text-align: center;
+    border-radius: 14px;
+    color: #DEDCDC;
+    text-decoration: none;
+    transition: all .3s;
+}
+.resume-container a:hover{
+    transform: scale(1.1);
+}
+.fa-file{
+    color: rgb(198, 198, 202);
+    margin-right: 5px;
+}

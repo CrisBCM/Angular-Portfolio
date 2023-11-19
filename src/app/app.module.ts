@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { faUser, faHeart, faJ} from '@fortawesome/free-solid-svg-icons';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { LenguangesCarouselComponent } from './components/introduction/lenguanges-carousel/lenguanges-carousel.component';
+import { DownloadResumeComponent } from './components/download-resume/download-resume.component';
 
 
 
@@ -23,6 +24,7 @@ import { LenguangesCarouselComponent } from './components/introduction/lenguange
     PortfolioMainComponent,
     ProjectsComponent,
     LenguangesCarouselComponent,
+    DownloadResumeComponent,
   ],
   imports: [
     BrowserModule,

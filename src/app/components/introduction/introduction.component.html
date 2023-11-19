@@ -3,11 +3,12 @@
         <div class="portrait-container">
             <img src="../../../assets/images/portrait.jpg" alt="my portrait">
         </div>
+        <app-download-resume class="resume"></app-download-resume>
         <div class="presentation-carousel">
             <div class="slider" [ngClass]="{'view1': view == 1, 'view2': view == 2, 'view3': view == 3}">
                 <div class="presentation card-style">
-                    <h1>Cristian Cruz Martinez</h1>
-                    <span class="angular-style">Angular Frontend Developer</span>
+                    <h1 class="">Cristian Cruz Martinez</h1>
+                    <span>Angular Frontend Developer</span>
                     <div class="links">
                         <a target="_blank" href="https://www.linkedin.com/in/crisbcm/">
                             <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
@@ -19,7 +20,7 @@
                 </div>
                 <div class="about-me-container card-style">
                     <div class="about-me">
-                        <h3>About me</h3>
+                        <!-- <h4>About me</h4> -->
                         <p><span class="highlight">Curious self-taught</span> in search of <span class="highlight">challenges</span> and <span class="highlight">knowledge</span>.</p>
                         <p>My goal is to become a more <span class="highlight">efficient developer</span>.</p>
                         <p>In my leisure time i enjoy training <span>🏋️‍♂️</span> and reading <span>📖</span>.</p>
@@ -28,12 +29,11 @@
             </div>
             <ul class="spots-carousel">
                 <li (click)="view = 1" class="spot">
-                    <fa-icon [icon]="'user'" class="spot-user" [ngClass]="{'active-spot-user': view == 1}"></fa-icon>
+                    <fa-icon [icon]="'user'" class="spot-user" [ngClass]="{'active-spot': view == 1}"></fa-icon>
                 </li>
                 <li (click)="view = 2" class="spot" >
-                    <fa-icon [icon]="'heart'" class="spot-heart" [ngClass]="{'active-spot-heart': view == 2}"></fa-icon>
+                    <fa-icon [icon]="'heart'" class="spot-heart" [ngClass]="{'active-spot': view == 2}"></fa-icon>
                 </li>
-                <li [ngClass]="{'active-spot': view == 3}" (click)="view = 3" class="spot"></li>
             </ul>
         </div>
     </div>

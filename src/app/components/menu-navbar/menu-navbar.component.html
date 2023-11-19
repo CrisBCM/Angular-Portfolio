@@ -12,10 +12,5 @@
             <a [ngClass]="{'a-active': actualPage == ''}" >Contact</a>
         </nav>
     </div>
-    <div class="resume-container">
-        <a href="#">
-            <fa-icon [icon]="['far', 'file']" class="fa-file"></fa-icon>
-            Download Resume
-        </a>
-    </div>
+    <app-download-resume class="resume"></app-download-resume>
 </header>
