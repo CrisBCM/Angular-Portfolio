@@ -9,7 +9,7 @@ import { faFile } from '@fortawesome/free-regular-svg-icons';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { PortfolioMainComponent } from './components/portfolio-main/portfolio-main.component';
 import { CommonModule } from '@angular/common';
-import { faUser, faHeart, faJ} from '@fortawesome/free-solid-svg-icons';
+import { faUser, faHeart, faJ, faArrowDown} from '@fortawesome/free-solid-svg-icons';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { LenguangesCarouselComponent } from './components/introduction/lenguanges-carousel/lenguanges-carousel.component';
 import { DownloadResumeComponent } from './components/download-resume/download-resume.component';
@@ -37,6 +37,6 @@ import { DownloadResumeComponent } from './components/download-resume/download-r
 })
 export class AppModule { 
   constructor(library: FaIconLibrary){
-    library.addIcons(faFile, faUser, faHeart);
+    library.addIcons(faArrowDown, faUser, faHeart);
   }
 }
