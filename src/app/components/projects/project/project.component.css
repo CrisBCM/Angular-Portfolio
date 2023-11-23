@@ -1,0 +1,86 @@
+.project{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    transition: all 1s;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.205);
+}
+.project::after {
+    content: "";
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.7847514005602241) 0%, rgba(37,39,37,0) 50%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    z-index: 2;
+    opacity: 1;
+    transition: all .5s ease-out;
+}
+.project::before {
+    content: "";
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.7987570028011204) 0%, rgba(37,39,37,0.16850490196078427) 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    z-index: 2;
+    opacity: 0;
+    transition: all .5s ease-out;
+}
+.project:hover::before{
+    opacity: 1;
+}
+.project > img{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    filter: brightness(100%);
+    object-fit: cover;
+    z-index: 1;
+}
+.details-container{
+    position: relative;
+    z-index: 3;
+    top: -60px;
+    transition: all .5s ease-in-out;
+}
+
+.project:hover .details-container{
+    top: 0;
+}
+.info-project{
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    transition: .5s ease-in-out;
+    z-index: 3;
+}
+.info-project h2{
+    font-family: sans-serif;
+    color: #dddddf;
+    margin: 0 0 7px 0;
+}
+.info-project p{
+    color: #dddddf;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+@keyframes apear {
+    0%{
+        opacity: 0;
+        transform: translateY(75px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.animation{
+    animation: apear 1.5s forwards;
+}

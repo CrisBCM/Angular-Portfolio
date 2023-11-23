@@ -13,6 +13,8 @@ import { faUser, faHeart, faJ, faArrowDown} from '@fortawesome/free-solid-svg-ic
 import { ProjectsComponent } from './components/projects/projects.component';
 import { LenguangesCarouselComponent } from './components/introduction/lenguanges-carousel/lenguanges-carousel.component';
 import { DownloadResumeComponent } from './components/download-resume/download-resume.component';
+import { DetailProjectComponent } from './components/projects/detail-project/detail-project.component';
+import { ProjectComponent } from './components/projects/project/project.component';
 
 
 
@@ -25,6 +27,8 @@ import { DownloadResumeComponent } from './components/download-resume/download-r
     ProjectsComponent,
     LenguangesCarouselComponent,
     DownloadResumeComponent,
+    DetailProjectComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,

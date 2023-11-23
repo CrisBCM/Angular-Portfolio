@@ -1,0 +1,8 @@
+<div class="project" [ngClass]="{'animation': isVisible}">
+    <img [src]="project.imgUrl" alt="project img">
+    <app-detail-project class="details-container" [urlOfPage]="project.detail.urlOfPage" [urlsImgLanguages]="project.detail.urlsImgLanguages" [urlOfGithub]="project.detail.urlOfGithub"></app-detail-project>
+    <div class="info-project">
+        <h2>{{project.name}}</h2>
+        <p>{{project.description}}</p>
+    </div>
+</div>
