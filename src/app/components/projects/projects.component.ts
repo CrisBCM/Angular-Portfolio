@@ -22,36 +22,16 @@ export class ProjectsComponent implements AfterViewInit{
         urlOfGithub: "https://github.com/CrisBCM/Frontend-B.P.3000"
       }
     },
-    {
-      name : "AAAAA",
-      description : "BBBB",
-      imgUrl: "https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png",
-      detail : {
-        urlsImgLanguages : ["../../../assets/images/lenguages-carousel/css-icon.svg", "../../../assets/images/lenguages-carousel/html-icon.svg"],
-        urlOfPage : "",
-        urlOfGithub : "https://github.com/CrisBCM/Frontend-B.P.3000"
-      }
-    },
-    {
-      name : "AAAAA",
-      description : "BBBB",
-      imgUrl: "https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png",
-      detail : {
-        urlsImgLanguages : ["../../../assets/images/lenguages-carousel/css-icon.svg", "../../../assets/images/lenguages-carousel/html-icon.svg"],
-        urlOfPage : "",
-        urlOfGithub : "https://github.com/CrisBCM/Frontend-B.P.3000"
-      }
-    },
-    {
-      name : "AAAAA",
-      description : "BBBB",
-      imgUrl: "https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png",
-      detail : {
-        urlsImgLanguages : ["../../../assets/images/lenguages-carousel/css-icon.svg", "../../../assets/images/lenguages-carousel/html-icon.svg"],
-        urlOfPage : "",
-        urlOfGithub : "https://github.com/CrisBCM/Frontend-B.P.3000"
-      }
-    }
+    // {
+    //   name : "AAAAA",
+    //   description : "BBBB",
+    //   imgUrl: "https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png",
+    //   detail : {
+    //     urlsImgLanguages : ["../../../assets/images/lenguages-carousel/css-icon.svg", "../../../assets/images/lenguages-carousel/html-icon.svg"],
+    //     urlOfPage : "",
+    //     urlOfGithub : "https://github.com/CrisBCM/Frontend-B.P.3000"
+    //   }
+    // }
   ];
 
   rect:any;
