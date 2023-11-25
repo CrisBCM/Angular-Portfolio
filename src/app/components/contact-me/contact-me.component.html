@@ -1,0 +1,12 @@
+<form [formGroup]="contactForm">
+  <label>
+    Your email:
+    <input type="email" name="email" formControlName="name">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message" formControlName="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit" (click)="onSubmit($event)">Send</button>
+</form>
