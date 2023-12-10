@@ -1,12 +1,26 @@
-<form [formGroup]="contactForm">
-  <label>
-    Your email:
-    <input type="email" name="email" formControlName="name">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message" formControlName="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit" (click)="onSubmit($event)">Send</button>
-</form>
+<section class="contact-me-container">
+  <article class="article-info">
+    <div class="container-text">
+      <p>Do you need a passionate Frontend developer?</p>
+      <p>I'm here and ready for your next challenge.</p>
+    </div>
+  </article>
+  <article class="article-form">
+    <h2>Get in touch</h2>
+    <form class="contact-me-form" [formGroup]="contactForm">
+      <label class="label-form" for="name">
+        Your name:
+        <input class="input-default input-text" type="text" name="name" formControlName="name">
+      </label>
+      <label class="label-form" for="email">
+        Your email:
+        <input class="input-default input-text" type="email" name="email" formControlName="email">
+      </label>
+      <label class="label-form">
+        Your message:
+        <textarea class="input-default input-textarea" name="message" formControlName="message"></textarea>
+      </label >
+      <button class="submit-btn" type="submit" (click)="onSubmit($event)">Send</button>
+    </form>
+  </article>
+</section>

@@ -9,6 +9,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class ContactMeComponent {
   contactForm = this.fb.group({
+    email:[''],
     name : [''],
     message : ['']
   })
