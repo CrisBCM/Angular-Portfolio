@@ -14,16 +14,43 @@ h2,p{
     align-items: center;
 }
 .container-text{
-    padding: 30px 20px;
+    position: relative;
+    /* padding: 30px 20px; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+    /* overflow: hidden; */
+    /* justify-content: center; */
+    /* gap: 20px; */
 }
-.container-text > p{
-    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-    text-align: center;
-    color:whitesmoke;
+.container-text::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 45px 50px;
+    top: -150px;
+    left: -20px;
+    background-color: rgba(95, 120, 173, 0.336);
+    border-radius: 3% 97% 100% 0% / 0% 100% 0% 100% ;
+    z-index: 1;
+}
+.container-text > span{
+    text-align: left;
+    font-size: clamp(2rem, 3vw, 3.3rem);
+    font-weight: bold;
+    /* text-align: center; */
+    color:rgb(187, 187, 187);
+    /* animation: appear 10s forwards; */
+    z-index: 2;
+}
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
 }
 .article-form{
     flex-basis: 100%;
