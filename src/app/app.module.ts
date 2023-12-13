@@ -9,7 +9,7 @@ import { IntroductionComponent } from './components/introduction/introduction.co
 import { PortfolioMainComponent } from './components/portfolio-main/portfolio-main.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { faUser, faHeart, faJ, faArrowDown} from '@fortawesome/free-solid-svg-icons';
+import { faUser, faHeart, faJ, faArrowDown, faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { LenguangesCarouselComponent } from './components/introduction/lenguanges-carousel/lenguanges-carousel.component';
 import { DownloadResumeComponent } from './components/download-resume/download-resume.component';
@@ -46,6 +46,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class AppModule { 
   constructor(library: FaIconLibrary){
-    library.addIcons(faArrowDown, faUser, faHeart);
+    library.addIcons(faArrowDown, faUser, faHeart, faPaperPlane);
   }
 }

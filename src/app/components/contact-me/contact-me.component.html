@@ -4,28 +4,32 @@
       <!-- <p>Do you need a passionate Frontend developer?</p> -->
       <!-- <p>I'M HERE AND READY FOR YOUR NEXT CHALLENGE!.</p> -->
       <span>I'M HERE</span>
-      <span>AND READY</span>
+      <span><span class="span-less-important">AND</span> READY</span>
       <span>FOR YOUR</span>
       <span>NEXT</span>
-      <span>CHALLENGE!</span>
+      <span class="span-more-important">CHALLENGE!</span>
     </div>
   </article>
   <article class="article-form">
-    <h2>Get in touch</h2>
+    <!-- <h2>Get in touch</h2> -->
     <form class="contact-me-form" [formGroup]="contactForm">
       <label class="label-form" for="name">
         Your name:
+        <span class="input-required" *ngIf="name.errors?.['required'] && name.dirty">Required</span>
         <input class="input-default input-text" type="text" name="name" formControlName="name">
       </label>
       <label class="label-form" for="email">
         Your email:
+        <span class="input-required" *ngIf="email.errors?.['required'] && email.dirty">Required</span>
+        <span class="input-required" *ngIf="email.errors?.['email'] && email.dirty">Incorrect email format. Please try again</span>
         <input class="input-default input-text" type="email" name="email" formControlName="email">
       </label>
       <label class="label-form">
         Your message:
+        <span class="input-required" *ngIf="message.errors?.['required'] && message.dirty">Required</span>
         <textarea class="input-default input-textarea" name="message" formControlName="message"></textarea>
       </label >
-      <button class="submit-btn" type="submit" (click)="onSubmit($event)">Send</button>
+      <button [disabled]="contactForm.invalid" class="submit-btn" [ngClass]="{'active-btn': contactForm.valid}" type="submit" (click)="onSubmit($event)"><fa-icon class="paper-plane-icon" icon="paper-plane"></fa-icon></button>
     </form>
   </article>
 </section>

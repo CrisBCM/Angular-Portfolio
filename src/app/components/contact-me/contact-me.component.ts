@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
@@ -9,12 +9,22 @@ import { FormBuilder } from '@angular/forms';
 })
 export class ContactMeComponent {
   contactForm = this.fb.group({
-    email:[''],
-    name : [''],
-    message : ['']
+    email:['', [Validators.required, Validators.email]],
+    name : ['',Validators.required],
+    message : ['', Validators.required]
   })
 
   constructor(private fb:FormBuilder, private http:HttpClient){
+  }
+
+  get email(){
+    return this.contactForm.get('email') as FormControl;
+  }
+  get name(){
+    return this.contactForm.get('name') as FormControl;
+  }
+  get message(){
+    return this.contactForm.get('message') as FormControl;
   }
 
   onSubmit(event:any){
