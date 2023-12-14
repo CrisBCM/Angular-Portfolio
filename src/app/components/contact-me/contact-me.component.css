@@ -66,13 +66,57 @@ h2,p{
 
 }
 .article-form{
+    position: relative;
     flex-basis: 100%;
     padding:70px 0px;
     /* background-color: rgba(168, 168, 168, 0.548); */
 }
 .article-form > h2{
-    color: rgb(109, 119, 175);
+    color: rgb(187, 187, 187);
     text-align: center; 
+}
+.modal-thanks{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252725;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+@keyframes appear {
+    0%{
+        opacity: 0;
+        
+    }
+    10%{
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.modal-thanks-body{
+    /* background-color: #252725; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(153, 153, 153);
+    margin-bottom: 200px;
+    animation: appear 1s ease-in-out forwards;
+}
+.modal-thanks-body > h2{
+    margin-bottom: 8px;
+}
+.modal-thanks-body > p{
+    font-size: 1.1rem;
+}
+.modal-icon{
+    color: rgba(56, 172, 56, 0.301);
+    font-size: 5rem;
+    margin-bottom: 15px;
 }
 .contact-me-form{
     padding: 50px 10%;
@@ -132,6 +176,8 @@ h2,p{
     color: rgb(117, 117, 117);
     padding: 10px 20px;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .active-btn{
     cursor: pointer;

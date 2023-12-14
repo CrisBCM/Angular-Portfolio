@@ -1,8 +1,6 @@
 <section class="contact-me-container">
   <article class="article-info">
     <div class="container-text">
-      <!-- <p>Do you need a passionate Frontend developer?</p> -->
-      <!-- <p>I'M HERE AND READY FOR YOUR NEXT CHALLENGE!.</p> -->
       <span>I'M HERE</span>
       <span><span class="span-less-important">AND</span> READY</span>
       <span>FOR YOUR</span>
@@ -11,7 +9,14 @@
     </div>
   </article>
   <article class="article-form">
-    <!-- <h2>Get in touch</h2> -->
+    <div *ngIf="isMessageSent" class="modal-thanks">
+      <article class="modal-thanks-body">
+        <fa-icon class="modal-icon" [icon]="['far', 'circle-check']"></fa-icon>
+        <h2 class="modal-title">Thank you for contacting me!</h2>
+        <p class="modal-info">Your message has been sent</p>
+      </article>
+    </div>
+    <h2>GET IN TOUCH</h2>
     <form class="contact-me-form" [formGroup]="contactForm">
       <label class="label-form" for="name">
         Your name:
@@ -29,7 +34,7 @@
         <span class="input-required" *ngIf="message.errors?.['required'] && message.dirty">Required</span>
         <textarea class="input-default input-textarea" name="message" formControlName="message"></textarea>
       </label >
-      <button [disabled]="contactForm.invalid" class="submit-btn" [ngClass]="{'active-btn': contactForm.valid}" type="submit" (click)="onSubmit($event)"><fa-icon class="paper-plane-icon" icon="paper-plane"></fa-icon></button>
+      <button *ngIf="!isMessageSent" [disabled]="contactForm.invalid" class="submit-btn" [ngClass]="{'active-btn': contactForm.valid}" type="submit" (click)="onSubmit($event)"><fa-icon *ngIf="!isLoading" class="paper-plane-icon" icon="paper-plane"></fa-icon> <app-loader *ngIf="isLoading"></app-loader></button>
     </form>
   </article>
 </section>

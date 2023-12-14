@@ -8,7 +8,7 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { PortfolioMainComponent } from './components/portfolio-main/portfolio-main.component';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { faUser, faHeart, faJ, faArrowDown, faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { LenguangesCarouselComponent } from './components/introduction/lenguanges-carousel/lenguanges-carousel.component';
@@ -17,6 +17,9 @@ import { DetailProjectComponent } from './components/projects/detail-project/det
 import { ProjectComponent } from './components/projects/project/project.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
+import { LoaderComponent } from './components/loader/loader.component';
+import { LoaderAnimationInterceptor } from './interceptors/loader-animation.interceptor';
 
 
 
@@ -31,7 +34,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DownloadResumeComponent,
     DetailProjectComponent,
     ProjectComponent,
-    ContactMeComponent
+    ContactMeComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -41,11 +45,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass:LoaderAnimationInterceptor, multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
   constructor(library: FaIconLibrary){
-    library.addIcons(faArrowDown, faUser, faHeart, faPaperPlane);
+    library.addIcons(faArrowDown, faUser, faHeart, faPaperPlane, faCircleCheck);
   }
 }

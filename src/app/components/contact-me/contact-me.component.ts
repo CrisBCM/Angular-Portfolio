@@ -1,20 +1,34 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Observable, Subject, takeUntil } from 'rxjs';
+import { LoaderService } from 'src/app/services/loader.service';
 
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.css']
 })
-export class ContactMeComponent {
+export class ContactMeComponent implements OnInit, OnDestroy{
+  isLoading:boolean = false;
+  onDestroy$:Subject<boolean> = new Subject();
   contactForm = this.fb.group({
     email:['', [Validators.required, Validators.email]],
     name : ['',Validators.required],
     message : ['', Validators.required]
   })
+  isMessageSent:boolean = false;
 
-  constructor(private fb:FormBuilder, private http:HttpClient){
+  constructor(private fb:FormBuilder, private http:HttpClient, private loaderService:LoaderService){
+    
+  }
+  ngOnInit(): void {
+    this.loaderService.isLoadingAsObservable.pipe(takeUntil(this.onDestroy$)).subscribe((isLoading:boolean)=>{
+      this.isLoading = isLoading;
+    })
+  }
+  ngOnDestroy(): void {
+    this.onDestroy$.next(true);
   }
 
   get email(){
@@ -30,8 +44,10 @@ export class ContactMeComponent {
   onSubmit(event:any){
     event.preventDefault();
     console.log(this.contactForm.value);
-    this.http.post('https://formspree.io/f/xvojjzbj', this.contactForm.value).subscribe(()=>{
-      console.log('Funciono!');
+    this.http.post('https://formspree.io/f/xvojjzbj', this.contactForm.value).subscribe({
+      complete:(()=>{
+        this.isMessageSent = true;
+      })
     });
   }
 }
