@@ -8,8 +8,7 @@
         <nav class="nav-menu">
             <a [ngClass]="{'a-active': actualPage == 'introduction'}" (click)="emitScroll.emit('introduction')">Introduction</a>
             <a [ngClass]="{'a-active': actualPage == 'projects'}" (click)="emitScroll.emit('projects')">Projects</a>
-            <a [ngClass]="{'a-active': actualPage == ''}" >Process</a>
-            <a [ngClass]="{'a-active': actualPage == ''}" >Contact</a>
+            <a [ngClass]="{'a-active': actualPage == 'contact-me'}" (click)="emitScroll.emit('contact-me')">Contact Me</a>
         </nav>
     </div>
     <app-download-resume class="resume"></app-download-resume>

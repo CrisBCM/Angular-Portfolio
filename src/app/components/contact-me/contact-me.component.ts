@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Observable, Subject, takeUntil } from 'rxjs';
 import { LoaderService } from 'src/app/services/loader.service';
@@ -18,6 +18,7 @@ export class ContactMeComponent implements OnInit, OnDestroy{
     message : ['', Validators.required]
   })
   isMessageSent:boolean = false;
+  @ViewChild('contactMeSection') contactMeSection!:ElementRef;
 
   constructor(private fb:FormBuilder, private http:HttpClient, private loaderService:LoaderService){
     
